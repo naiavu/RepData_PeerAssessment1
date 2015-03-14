@@ -1,12 +1,3 @@
----
-title: 'Reproducible Research: Peer Assessment 1'
-output:
-  html_document:
-    fig_height: 6
-    fig_width: 8
-    keep_md: yes
-    theme: journal
----
 
 # Reproducible Research: Peer Assessment 1
 
