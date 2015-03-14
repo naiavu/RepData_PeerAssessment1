@@ -128,7 +128,7 @@ hist(stepsByDayNoNA$steps, breaks=seq(from=0, to=25000, by=1000), ylim=range(0:2
 ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
 
 ```r
-#  Calculating and reporting the mean and the median on new dataset
+#  Calculating and reporting the mean and the median for a new dataset where missing values are filled in:
 stepsMeanNoNA <- mean(stepsByDayNoNA$steps)
 stepsMedianNoNA <- median(stepsByDayNoNA$steps)
 cat("Mean of the total number of steps per day calculated on imputed dataset:", as.character(stepsMeanNoNA))
@@ -145,9 +145,9 @@ cat("Median of the total number of steps per day calculated on imputed dataset:"
 ```
 ## Median of the total number of steps per day calculated on imputed dataset: 10766.1886792453
 ```
-*The mean of the total number of steps calculated on new dataset is the same as in the first part of the assignment since the used strategy was to replace missing values with the mean for that interval.*
+*The mean of the total number of steps calculated on a new dataset is the same as in the first part of the assignment since I chose strategy to replace missing values with the mean for that interval.*
 
-*The median of the total number of steps calculated on new dataset has become the mean of the total number of steps since I used mean values for the replacement of missing values.*
+*The median of the total number of steps calculated on a new dataset has become the mean of the total number of steps since I used mean values for the replacement of missing values.*
 
 ## Are there differences in activity patterns between weekdays and weekends?
 1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day
@@ -170,4 +170,4 @@ xyplot(steps ~ interval | daytype, stepsByDaytype, type = "l", layout = c(1,2), 
 
 ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
-*Yes there are differences in activity patterns between weekdays and weekends: on a weekdays it is highest in the mornings and then at least twice as low throughout the day, whereas on a weekends it is more evenly spread out with slightly higher activity in the mornings.*
+*Yes there are differences in activity patterns between weekdays and weekends: on a weekdays activity is highest in the mornings and then at least twice as low throughout the day, whereas on a weekends it is more evenly spreaded out with slightly higher activity in the mornings.*
